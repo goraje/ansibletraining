@@ -1,0 +1,15 @@
+[control]
+ansible     ansible_connection=local
+
+[centos]
+centos1     ansible_port=2345
+centos2
+
+[centos:vars]
+ansible_user=root
+
+[ubuntu]
+ubuntu[1:2]
+
+[ubuntu:vars]
+ansible_become=true

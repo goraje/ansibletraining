@@ -1,7 +1,9 @@
+[control]
+ansible     ansible_connection=local
+
 [centos]
 centos1     ansible_user=root       ansible_port=2345
 centos2     ansible_user=root
 
 [ubuntu]
-ubuntu1     ansible_become=true
-ubuntu2     ansible_become=true
+ubuntu[1:2]     ansible_become=true
