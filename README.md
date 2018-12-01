@@ -1,2 +1,2 @@
-# ansibletraining
+# Mastering Ansible
 Training course materials
