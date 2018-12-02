@@ -1,4 +1,4 @@
-[control]
+[provision]
 ansible     ansible_connection=local
 
 [centos]
@@ -13,3 +13,7 @@ ubuntu[1:2]
 
 [ubuntu:vars]
 ansible_become=true
+
+[linux:children]
+centos
+ubuntu
