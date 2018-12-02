@@ -1,4 +1,4 @@
-[control]
+[provision]
 ansible     ansible_connection=local
 
 [centos]
