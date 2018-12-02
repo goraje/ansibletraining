@@ -1,0 +1,13 @@
+[provision]
+ansible     ansible_connection=local
+
+[centos]
+centos1
+centos2
+
+[ubuntu]
+ubuntu[1:2]
+
+[linux:children]
+centos
+ubuntu
