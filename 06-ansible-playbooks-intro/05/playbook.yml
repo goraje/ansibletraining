@@ -11,9 +11,12 @@
 # and playbook wide variables.
 - name: Example playbook
   hosts: all
+  gather_facts: false
+  vars:
+    varkey1: varkey1_value
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
-    - name: Example task
-      command: whoami
+    - debug:
+        msg: 'This is the value of varkey1: {{ varkey1 }}' 
 ...

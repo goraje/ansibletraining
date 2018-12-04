@@ -11,9 +11,14 @@
 # and playbook wide variables.
 - name: Example playbook
   hosts: all
+  become: true
+  gather_facts: false
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
     - name: Example task
       command: whoami
+      register: whoami_output
+    - debug:
+        msg: "Remote user: {{ whoami_output.stdout }}"
 ...
