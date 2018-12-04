@@ -16,8 +16,8 @@
   # that will be executed on the remote hosts.
   tasks:
     - name: Example task
-      command: id
-      register: id_output
+      command: whoami
+      register: whoami_output
     - debug:
-        msg: "Current id {{ id_output.stdout }}"
+        msg: "Remote user: {{ whoami_output.stdout }}"
 ...
