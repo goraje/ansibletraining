@@ -19,5 +19,5 @@
       command: id
       register: id_output
     - debug:
-      msg: "Current id {{ id_output.stdout }}"
+        msg: "Current id {{ id_output.stdout }}"
 ...
