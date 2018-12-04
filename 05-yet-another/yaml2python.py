@@ -13,7 +13,7 @@ from pygments.lexers.data import JsonLexer, YamlLexer
 STYLE='rrt'
 
 def pprint_python(obj):
-    print(highlight(pformat(obj), PyhthonLexer(), Terminal256Formatter(style=STYLE)))
+    print(highlight(pformat(obj), PythonLexer(), Terminal256Formatter(style=STYLE)))
 
 def pprint_json(obj):
     print(highlight(obj, JsonLexer(), Terminal256Formatter(style=STYLE)))
