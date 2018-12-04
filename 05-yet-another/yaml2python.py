@@ -10,7 +10,7 @@ from pygments.formatters import Terminal256Formatter
 from pygments.lexers import PythonLexer
 from pygments.lexers.data import JsonLexer, YamlLexer
 
-STYLE='rtt'
+STYLE='rrt'
 
 def pprint_python(obj):
     print(highlight(pformat(obj), PyhthonLexer(), Terminal256Formatter(style=STYLE)))
