@@ -18,5 +18,5 @@
       command: whoami
       register: whoami_output
     - debug:
-      msg: "Remote user: {{ whoami_output.stdout }}"
+        msg: "Remote user: {{ whoami_output.stdout }}"
 ...
