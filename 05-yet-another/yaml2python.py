@@ -7,7 +7,7 @@ import yaml
 from pprint import pformat
 from pygments import highlight
 from pygments.formatters import Terminal256Formatter
-from pygments.lexers import PyhthonLexer
+from pygments.lexers import PythonLexer
 from pygments.lexers.data import JsonLexer, YamlLexer
 
 STYLE='rtt'
