@@ -18,9 +18,11 @@
     - name: Task1
       debug:
         msg: This is Task1
-      tag: task1
+      tags:
+        - task1
     - name: Task2
       debug: 
         msg: This is Task2
-      tag: Task2
+      tags: 
+        - task2
 ...

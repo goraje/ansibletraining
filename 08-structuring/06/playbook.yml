@@ -1,6 +1,8 @@
 ---
 - import_playbook: playbook_1.yml
-  tags: playbook_1
+  tags:
+    - playbook_1
 - import_playbook: playbook_2.yml
-  tags: playbook_2
+  tags: 
+    - playbook_2
 ...
