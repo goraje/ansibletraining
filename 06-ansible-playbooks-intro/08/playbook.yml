@@ -10,7 +10,7 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: centos
+  hosts: linux
   become: true
   gather_facts: false
   environment:
@@ -23,4 +23,5 @@
       yum:
        name: '*'
        state: latest
+      when: ansible_distribution == "CentOS"
 ...
