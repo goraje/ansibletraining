@@ -14,11 +14,12 @@
   gather_facts: false
   vars:
     vars_directory_content: "{{ lookup('pipe', 'ls /home/ute/Downloads')}}"
-  set_fact:
-    fact_directory_content: "{{ lookup('pipe', 'ls /home/ute/Downloads')}}"
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
+    - name: Set the custom fact
+      set_fact:
+        fact_directory_content: "{{ lookup('pipe', 'ls /home/ute/Downloads')}}"
     - name: Initial value for vars_directory_content
       debug:
         msg: "{{ vars_directory_content }}"

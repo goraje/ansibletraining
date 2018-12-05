@@ -15,10 +15,8 @@
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
-    - name: Set a custom fact
-      set_fact:
-        custom_fact: This is a custom fact
-    - name: Print the custom fact
+    - name: TASK1
       debug:
-        msg: "{{ custom_fact }}"
+        msg: This is Task1
+    - include_tasks: tasks.yml
 ...
