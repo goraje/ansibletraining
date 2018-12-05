@@ -17,5 +17,5 @@
   tasks:
     - name: Accessing the hostvars
       debug:
-        msg: '{{ hostvars[inventory_hostname].ansible_user | default('ute') }}'
+        msg: "{{ hostvars[inventory_hostname].ansible_user | default('ute') }}"
 ...
