@@ -1,0 +1,3 @@
+#!/bin/bash
+echo [kernel_package]
+echo package=`uname -r`

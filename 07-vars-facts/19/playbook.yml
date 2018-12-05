@@ -10,13 +10,24 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: provision
-  fact_path: "{{ playbook_dir }}/files"
+  hosts: all
+  become: true
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
-    - debug:
-        msg: "{{ ansible_local.samplefacts1.jsonfacts }}"
-    - debug:
-        msg: "{{ ansible_local.samplefacts2.inifacts }}"
+    - name: Create facts.d directory on remote hosts
+      file:
+        state: directory
+        recurse: yes
+        path: /etc/ansible/facts.d
+    - name: Copy the custom facts
+      copy:
+        src: samplefacts1.fact
+        dest: /etc/ansible/facts.d/kernel.fact
+        owner: root
+        group: root
+        mode: 0755
+    - name: Re-run setup
+      setup:
+        filter: ansible_local
 ...

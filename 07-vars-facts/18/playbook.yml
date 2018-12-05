@@ -11,7 +11,7 @@
 # and playbook wide variables.
 - name: Example playbook
   hosts: provision
-  fact_path: "{{ playbook_dir }}/facts.d"
+  fact_path: "{{ playbook_dir }}/files"
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
