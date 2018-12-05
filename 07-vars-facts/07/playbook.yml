@@ -25,7 +25,7 @@
         msg: "{{ dict1 }}"
     - name: Accessing the dictionary using the Python syntax
       debug:
-        msg: "{{ dict1[key1] }}"
+        msg: "{{ dict1['key1'] }}"
     - name: Accessing the dictionary using the dot notation
       debug:
         msg: "{{ dict1.key1 }}"
