@@ -18,5 +18,5 @@
     - name: Task1
       debug:
         msg: Task1 in playbook_1
-- import_playbooks: playbook_2.yml
+- import_playbook: playbook_2.yml
 ...
