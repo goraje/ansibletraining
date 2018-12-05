@@ -1,0 +1,38 @@
+---
+# Each Ansible playbook starts with a '-',
+# which means that Ansible expects the user
+# to pass an array of arguments.
+
+# The first section describes how the connection
+# to the target remotes should be executed.
+# Here, the user can define a wide variety of
+# parametrs. Most notably, the: name of the playbook,
+# target hosts inventory group, privilege escalation
+# and playbook wide variables.
+- name: Example playbook
+  hosts: provision
+  gather_facts: false
+  vars:
+    vars_directory_content: "{{ lookup('pipe', 'ls /home/ute/Downloads')}}"
+  set_fact:
+    fact_directory_content: "{{ lookup('pipe', 'ls /home/ute/Downloads')}}"
+  # The 'tasks' section represents the list of tasks
+  # that will be executed on the remote hosts.
+  tasks:
+    - name: Initial value for vars_directory_content
+      debug:
+        msg: "{{ vars_directory_content }}"
+    - name: Initial value for fact_directory_content
+      debug:
+        msg: "{{ fact_directory_content }}"
+    - name: Add a file to Downloads
+      file:
+        state: touch
+        dest: /home/ute/Downloads/var_vs_fact
+    - name: Post-modification value for vars_directory_content
+      debug:
+        msg: "{{ vars_directory_content }}"
+    - name: Post-modification value for fact_directory_content
+      debug:
+        msg: "{{ fact_directory_content }}"
+...
