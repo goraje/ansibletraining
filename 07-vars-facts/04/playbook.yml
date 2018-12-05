@@ -24,7 +24,7 @@
     - name: Accessing the value using the Python syntax
       debug:
         msg: "{{ dict1_alternate['key1'] }}"
-    - name: Accessing the value using the YAML syntax
+    - name: Accessing the value using the dot notation
       debug:
         msg: "{{ dict1_alternate.key1 }}"
 ...
