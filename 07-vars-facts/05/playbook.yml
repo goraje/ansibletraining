@@ -20,11 +20,11 @@
   tasks:
     - name: This is a list
       debug:
-        msg: '{{ list1_alternate }}'
+        msg: "{{ list1_alternate }}"
     - name: Accessing the values using the Python syntax
       debug:
-        msg: '{{ list1_alternate[0] }}'
+        msg: "{{ list1_alternate[0] }}"
     - name: Accessing the values using the YAML syntax
       debug:
-        msg: '{{ list1_alternate.0 }}'
+        msg: "{{ list1_alternate.0 }}"
 ...

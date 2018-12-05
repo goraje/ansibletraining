@@ -18,5 +18,5 @@
   # that will be executed on the remote hosts.
   tasks:
     - debug:
-        msg: 'This is the value of varkey1: {{ varkey1 }}' 
+        msg: "This is the value of varkey1: {{ varkey1 }}"
 ...

@@ -21,11 +21,11 @@
   tasks:
     - name: This is a dictionary
       debug:
-        msg: '{{ dict1 }}'
+        msg: "{{ dict1 }}"
     - name: Accessing the value using the Python syntax
       debug:
-        msg: '{{ dict1[key1] }}'
+        msg: "{{ dict1['key1'] }}"
     - name: Accessing the value using the YAML syntax
       debug:
-        msg: '{{ dict1.key1 }}'
+        msg: "{{ dict1.key1 }}"
 ...

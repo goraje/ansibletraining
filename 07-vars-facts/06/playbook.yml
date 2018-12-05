@@ -19,17 +19,17 @@
   tasks:
     - name: An external list
       debug:
-        msg: '{{ list1[0] }}'
+        msg: "{{ list1[0] }}"
     - name: An external inline list
       debug:
-        msg: '{{ list1_alternate[0] }}'
+        msg: "{{ list1_alternate[0] }}"
     - name: An external dictionary
       debug:
-        mgs: '{{ dict1.key1 }}'
+        mgs: "{{ dict1.key1 }}"
     - name: An external inline dictionary
       debug:
-        msg: '{{ dict1_alternate[key1] }}'
+        msg: "{{ dict1_alternate['key1'] }}"
     - name: An external variable
       debug:
-        msg: '{{ var1 }}' 
+        msg: "{{ var1 }}" 
 ...
