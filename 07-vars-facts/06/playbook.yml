@@ -1,0 +1,35 @@
+---
+# Each Ansible playbook starts with a '-',
+# which means that Ansible expects the user
+# to pass an array of arguments.
+
+# The first section describes how the connection
+# to the target remotes should be executed.
+# Here, the user can define a wide variety of
+# parametrs. Most notably, the: name of the playbook,
+# target hosts inventory group, privilege escalation
+# and playbook wide variables.
+- name: Example playbook
+  hosts: provision
+  gather_facts: false
+  vars_files:
+    - bucket.yml
+  # The 'tasks' section represents the list of tasks
+  # that will be executed on the remote hosts.
+  tasks:
+    - name: An external list
+      debug:
+        msg: '{{ list1[0] }}'
+    - name: An external inline list
+      debug:
+        msg: '{{ list1_alternate[0] }}'
+    - name: An external dictionary
+      debug:
+        mgs: '{{ dict1.key1 }}'
+    - name: An external inline dictionary
+      debug:
+        msg: '{{ dict1_alternate[key1] }}'
+    - name: An external variable
+      debug:
+        msg: '{{ var1 }}' 
+...

@@ -1,0 +1,17 @@
+---
+list1:
+  - value1
+  - value2
+  - value3
+
+list1_alternate:
+  [ value1, value2, value3 ]
+
+dict1:
+  key1: value1
+
+dict1_alternate:
+  { key1: value1 }
+
+var1: var1_value
+...
