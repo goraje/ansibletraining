@@ -25,7 +25,7 @@
         msg: "{{ list1_alternate[0] }}"
     - name: An external dictionary
       debug:
-        mgs: "{{ dict1.key1 }}"
+        msg: "{{ dict1.key1 }}"
     - name: An external inline dictionary
       debug:
         msg: "{{ dict1_alternate['key1'] }}"
