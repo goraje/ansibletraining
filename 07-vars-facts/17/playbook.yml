@@ -16,5 +16,7 @@
   # that will be executed on the remote hosts.
   tasks:
     - debug:
-        msg: " ansible_local.samplefact.general"
+        msg: "{{ ansible_local.samplefacts1.jsonfacts }}"
+    - debug:
+        msg: "{{ ansible_local.samplefacts2.inifacts }}"
 ...
