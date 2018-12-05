@@ -14,7 +14,7 @@
   gather_facts: false
   vars_prompt:
     - name: user_password
-      prompt: "Enter your password:"
+      prompt: "Enter your password"
       encrypt: sha256_crypt
       confirm: true
       salt_size: 7
@@ -22,5 +22,5 @@
   # that will be executed on the remote hosts.
   tasks:
     - debug:
-        msg: "My first name is {{ first_name }}"
+        msg: "My first name is {{ user_password }}"
 ...
