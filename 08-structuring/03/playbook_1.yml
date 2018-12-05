@@ -9,16 +9,14 @@
 # parametrs. Most notably, the: name of the playbook,
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
-- name: Example playbook
+- name: playbook_1
   hosts: provision
   gather_facts: false
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
-    - name: Include tasks run
-      include_tasks: tasks_include.yml
-      when: include_tasks_condition is not defined
-    - name: Import tasks run
-      import_tasks: tasks_import.yml
-      when: import_tasks_condition is not defined
+    - name: Task1
+      debug:
+        msg: Task1 in playbook_1
+- import_playbooks: playbook_2.yml
 ...

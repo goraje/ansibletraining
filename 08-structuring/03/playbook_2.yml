@@ -9,14 +9,13 @@
 # parametrs. Most notably, the: name of the playbook,
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
-- name: Playbook1
-  hosts: provision
+- name: playbook_2
+  hosts: centos
   gather_facts: false
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
-    - name: TASK1
+    - name: Task2
       debug:
-        msg: Task1 in Playbook1
-- import_playbooks: playbook2.yml
+        msg: Task2 in playbook_2
 ...

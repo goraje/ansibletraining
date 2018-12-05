@@ -1,8 +1,8 @@
 ---
-- name: TASK2
+- name: Task2
   debug:
     msg: This is Task2
-- name: TASK3
+- name: Task3
   debug:
     msg: This is Task3
 ...

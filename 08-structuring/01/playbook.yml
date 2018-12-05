@@ -15,7 +15,7 @@
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
-    - name: TASK1
+    - name: Task1
       debug:
         msg: This is Task1
     - include_tasks: tasks.yml
