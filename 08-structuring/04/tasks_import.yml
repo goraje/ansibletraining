@@ -1,14 +1,14 @@
 ---
-- name: Include1
+- name: Import1
   debug:
-    msg: Include1
+    msg: Import1
 - name: Set include_tasks_condition
   set_fact:
     import_tasks_condition: false
-- name: Include2
+- name: Import2
   debug:
-    msg: Include2
-- name: Include3
+    msg: Import2
+- name: Import3
   debug:
-    msg: Include3
+    msg: Import3
 ...
