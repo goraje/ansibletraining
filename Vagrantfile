@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
       end
 
       m.ssh.insert_key = false
-      m.vm.provision "file", source: "./ansible_key.pub", destination: "~/ansible_key.pub"
+      m.vm.provision "file", source: "./keys/ansible_key.pub", destination: "~/ansible_key.pub"
       m.vm.provision "shell", inline: <<-END
         cd /home/vagrant
         mkdir -p /root/.ssh
