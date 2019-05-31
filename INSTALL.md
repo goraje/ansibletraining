@@ -95,7 +95,7 @@ The newest version of Windows Management Framework available for Windows 7 SP1 o
 
 ## Environment setup
 
-The definitions of the VMs that will be used during the training are located in the Vagrantfile in the top directory of the project.
+The definitions of the VMs that will be used during the training are located in the [Vagrantfile](Vagrantfile) in the top directory of the project.
 
 In order to create and provision the VM's open your Linux terminal/Windows PowerShell and navigate to the project's top directory and execute:
 
