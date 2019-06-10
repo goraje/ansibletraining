@@ -1,7 +1,7 @@
 [centos]
-centos1     ansible_user=root
-centos2     ansible_user=root
+centos1     ansible_host=192.168.77.21      ansible_become=true
+centos2     ansible_host=192.168.77.22      ansible_become=true
 
 [ubuntu]
-ubuntu1     ansible_become=true
-ubuntu2     ansible_become=true
+ubuntu1     ansible_host=192.168.77.23      ansible_user=root
+ubuntu2     ansible_host=192.168.77.24      ansible_user=root

@@ -10,12 +10,12 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: provision
+  hosts: centos1
   gather_facts: false
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
-    - name: Accessing the hostvars
+    - name: Print the Ansible user
       debug:
         msg: '{{ hostvars[inventory_hostname].ansible_user }}'
 ...

@@ -10,7 +10,7 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: linux
+  hosts: all
   become: true
   environment:
     http_proxy: http://10.144.1.10:8080

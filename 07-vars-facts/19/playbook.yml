@@ -10,7 +10,7 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: all
+  hosts: centos1
   become: true
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.

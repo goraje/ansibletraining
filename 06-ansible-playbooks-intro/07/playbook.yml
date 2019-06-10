@@ -10,7 +10,7 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: linux
+  hosts: all
   become: true
   environment:
     http_proxy: http://10.144.1.10:8080
@@ -18,9 +18,9 @@
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
-    - name: Update all packages
+    - name: Install vim on CentOS machines
       yum:
-       name: '*'
-       state: latest
+       name: vim
+       state: present
       when: ansible_distribution == "CentOS"
 ...

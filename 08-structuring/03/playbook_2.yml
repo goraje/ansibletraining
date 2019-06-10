@@ -10,7 +10,7 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: playbook_2
-  hosts: centos
+  hosts: ubuntu
   gather_facts: false
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.

@@ -10,7 +10,7 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: provision
+  hosts: centos1
   gather_facts: false
   vars:
     dict1_alternate:

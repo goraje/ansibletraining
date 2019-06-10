@@ -13,13 +13,13 @@
   hosts: provision
   gather_facts: false
   vars:
-    vars_directory_content: "{{ lookup('pipe', 'ls /home/ute/Downloads')}}"
+    vars_directory_content: "{{ lookup('pipe', 'ls {{ playbook_dir }}')}}"
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
   tasks:
     - name: Set the custom fact
       set_fact:
-        fact_directory_content: "{{ lookup('pipe', 'ls /home/ute/Downloads')}}"
+        fact_directory_content: "{{ lookup('pipe', 'ls')}}"
     - name: Initial value for vars_directory_content
       debug:
         msg: "{{ vars_directory_content }}"
@@ -29,7 +29,7 @@
     - name: Add a file to Downloads
       file:
         state: touch
-        dest: /home/ute/Downloads/var_vs_fact
+        dest: "{{ playbook_dir}}/var_vs_fact"
     - name: Post-modification value for vars_directory_content
       debug:
         msg: "{{ vars_directory_content }}"

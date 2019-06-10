@@ -2,18 +2,16 @@
 ansible     ansible_connection=local
 
 [centos]
-centos1     ansible_port=2345
-centos2
-
-[centos:vars]
-ansible_user=root
+centos1     ansible_host=192.168.77.21      ansible_port=2345
+centos2     ansible_host=192.168.77.22
 
 [ubuntu]
-ubuntu[1:2]
-
-[ubuntu:vars]
-ansible_become=true
+ubuntu1     ansible_host=192.168.77.23
+ubuntu2     ansible_host=192.168.77.24
 
 [linux:children]
 centos
 ubuntu
+
+[linux:vars]
+ansible_user=root

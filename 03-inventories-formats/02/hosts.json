@@ -9,9 +9,12 @@
     "centos": {
         "hosts": {
             "centos1": {
-                "ansible_port": 2345
+                "ansible_port": 2345,
+                "ansible_host": "192.168.77.21"
             },
-            "centos2": null
+            "centos2": {
+                "ansible_host": "192.168.77.22"
+            }
         },
         "vars": {
             "ansible_user": "root"
@@ -19,8 +22,12 @@
     },
     "ubuntu": {
         "hosts": {
-            "ubuntu1": null,
-            "ubuntu2": null
+            "ubuntu1": {
+                "ansible_host": "192.168.77.23"
+            },
+            "ubuntu2": {
+                "ansible_host": "192.168.77.24"
+            }
         },
         "vars": {
             "ansible_become": true
