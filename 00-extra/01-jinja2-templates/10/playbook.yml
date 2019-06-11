@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: Jinja2 for loop
+      debug:
+        msg: >
+          {% for number in range(10, 0, -1) -%}
+            {% if number is even -%}
+              {% continue %}
+            {% endif -%}
+            {{ number }}
+          {% endfor %}
+...

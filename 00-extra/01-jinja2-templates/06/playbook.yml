@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+    - name: Jinja2 if/else statement
+      debug:
+        msg: >
+          {% set some_var = 'some_value' -%}
+          {# This is a comment in Jinja2 -#}
+          {% if some_var is defined -%}
+            some_var is defined
+          {% else -%}
+            some_var is not_defined
+          {% endif %}
+...

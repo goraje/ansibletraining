@@ -1,0 +1,15 @@
+---
+- hosts: all
+  tasks:
+    - name: Block of executed modules
+      block:
+        - name: Example 1
+          debug:
+            msg: This is Example 1
+        - name: Example 2
+          debug:
+            msg: This is Example 2
+        - name: Example 3
+          debug:
+            msg: This is Example 3
+...

@@ -34,56 +34,19 @@ Vagrant.configure("2") do |config|
       inline: <<-END
         mkdir -p /root/.ssh
         mkdir -p /home/vagrant/.ssh
-        touch  /root/.ssh/authorized_keys
-        touch /home/vagrant/authorized_keys
         chown -R vagrant:vagrant /home/vagrant/.ssh
       END
 
       m.vm.provision :file, 
-      source: "./keys/ansible_key.pub", 
+      source: File.dirname(__FILE__) + "/keys/ansible_key.pub", 
       destination: "ansible_key.pub"
 
       m.vm.provision :shell,
       inline: <<-END
         cat ansible_key.pub >> /root/.ssh/authorized_keys
         cat ansible_key.pub >> /home/vagrant/.ssh/authorized_keys
+        rm /home/vagrant/ansible_key.pub
       END
-      
-      #if vm_data[:box] == 'bento/centos-7'
-      #  m.vm.provision :shell, 
-      #  inline: <<-END
-      #    useradd -ms /bin/bash centos
-      #    mkdir -p /root/.ssh
-      #    mkdir -p /home/centos/.ssh
-      #  END
-      #  m.vm.provision :file, 
-      #  source: "./keys/ansible_key.pub", 
-      #  destination: "authorized_keys"
-      #  m.vm.provision :shell,
-      #  inline: <<-END
-      #    cp authorized_keys /root/.ssh/
-      #    mv authorized_keys /home/centos/.ssh
-      #    chown -R centos:centos /home/centos/.ssh
-      #  END
-      #end
-
-      #if vm_data[:box] == 'bento/ubuntu-16.04'
-      #  m.vm.provision :shell, 
-      #  inline: <<-END
-      #    useradd -ms /bin/bash ubuntu
-      #    mkdir -p /root/.ssh
-      #    mkdir -p /home/ubuntu/.ssh
-      #  END
-      #  m.vm.provision :file, 
-      #  source: "./keys/ansible_key.pub", 
-      #  destination: "authorized_keys"
-      #  m.vm.provision :shell,
-      #  inline: <<-END
-      #    cp authorized_keys /root/.ssh/
-      #    mv authorized_keys /home/ubuntu/.ssh
-      #    chown -R ubuntu:ubuntu /home/ubuntu/.ssh
-      #  END
-      #end
 
     end
 

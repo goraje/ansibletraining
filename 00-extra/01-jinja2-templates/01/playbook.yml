@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: Jinja2 if statement
+      debug:
+        msg: >
+          {# This is a comment in Jinja2 -#}
+          {% if ansible_distribution == "CentOS" -%}
+            This machine runs on CentOS
+          {% endif %}
+...
