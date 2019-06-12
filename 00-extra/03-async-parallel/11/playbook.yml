@@ -1,0 +1,16 @@
+---
+- hosts: all
+  gather_facts: false
+  serial: 2
+  tasks:
+    - name: 1st sleep
+      command: sleep 1
+    - name: 2nd sleep
+      command: sleep 1
+    - name: 3rd sleep
+      command: sleep 1
+    - name: 4th sleep
+      command: sleep 1
+    - name: 5th sleep
+      command: sleep 1
+...

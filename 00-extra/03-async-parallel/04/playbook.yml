@@ -1,0 +1,29 @@
+---
+- hosts: all
+  tasks:
+    - name: 1st sleep
+      command: sleep 5
+      when: ansible_hostname == 'centos1'
+      async: 10
+      poll: 1
+    - name: 2nd sleep
+      command: sleep 5
+      when: ansible_hostname == 'centos2'
+      async: 10
+      poll: 1
+    - name: 3rd sleep
+      command: sleep 5
+      when: ansible_hostname == 'ubuntu1'
+      async: 10
+      poll: 1
+    - name: 4th sleep
+      command: sleep 5
+      when: ansible_hostname == 'ubuntu2'
+      async: 10
+      poll: 1
+    - name: 5th sleep
+      command: sleep 5
+      when: ansible_hostname == 'centos1'
+      async: 10
+      poll: 1
+...
