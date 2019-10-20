@@ -1,19 +1,12 @@
 {
-    "provision": {
-        "hosts": {
-            "ansible": {
-                "ansible_connection": "local"
-            }
-        }
-    },
     "centos": {
         "hosts": {
             "centos1": {
-                "ansible_port": 2345,
-                "ansible_host": "192.168.77.21"
+                "ansible_connection": "local"
             },
             "centos2": {
-                "ansible_host": "192.168.77.22"
+                "ansible_host": "192.168.77.22",
+                "ansible_port": 2345
             }
         },
         "vars": {
