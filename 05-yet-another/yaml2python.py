@@ -36,10 +36,10 @@ pprint_yaml(open(args.file,'r').read())
 print('\n============================')
 print('*** JSON FILE EQUIVALENT ***')
 print('============================\n')
-pprint_json(json.dumps(yaml.load(open(args.file)), indent=4, sort_keys=True))
+pprint_json(json.dumps(yaml.load(open(args.file), Loader=yaml.FullLoader), indent=4, sort_keys=True))
 
 # PRINT THE PYTHON INTERPRETATION OF THE FILE TO THE TERMINAL
 print('\n=============================')
 print('*** PYTHON INTERPRETATION ***')
 print('=============================\n')
-pprint_python(yaml.load(open(args.file)))
+pprint_python(yaml.load(open(args.file), Loader=yaml.FullLoader))

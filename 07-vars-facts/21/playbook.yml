@@ -10,7 +10,7 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: provision
+  hosts: centos1
   gather_facts: false
   vars:
     vars_directory_content: "{{ lookup('pipe', 'ls {{ playbook_dir }}')}}"
@@ -26,7 +26,7 @@
     - name: Initial value for fact_directory_content
       debug:
         msg: "{{ fact_directory_content }}"
-    - name: Add a file to Downloads
+    - name: Add a file to the playbook directory
       file:
         state: touch
         dest: "{{ playbook_dir}}/var_vs_fact"
