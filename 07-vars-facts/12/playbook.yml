@@ -17,5 +17,5 @@
   tasks:
     - name: Print the Ansible user
       debug:
-        msg: '{{ hostvars[inventory_hostname].ansible_user }}'
+        msg: '{{ hostvars[inventory_hostname].ansible_connection }}'
 ...

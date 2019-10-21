@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: all, !centos1
   become: true
   tasks:
     - name: Send reboot signal to all hosts

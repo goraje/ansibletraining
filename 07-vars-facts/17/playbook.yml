@@ -10,7 +10,7 @@
 # target hosts inventory group, privilege escalation
 # and playbook wide variables.
 - name: Example playbook
-  hosts: provision
+  hosts: centos1
   fact_path: "{{ playbook_dir }}/files"
   # The 'tasks' section represents the list of tasks
   # that will be executed on the remote hosts.
