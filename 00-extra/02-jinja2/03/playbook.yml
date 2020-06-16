@@ -7,5 +7,5 @@
           {% if ansible_distribution == "CentOS" -%}
             This is one of CentOS VMs - {{ ansible_hostname }}
           {% else -%}
-            This is one of Ubunut VMs - {{ ansible_hostname }}
+            This is one of Ubuntu VMs - {{ ansible_hostname }}
           {% endif %}
