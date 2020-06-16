@@ -1,0 +1,113 @@
+site_name: "Ansible Training"
+repo_url: "https://github.com/goraje/ansibletraining"
+repo_name: "goraje/ansibletraining"
+
+nav:
+  - index.md
+  - Training:
+      - 1. Inventories and privilege escalation:
+          - Example 1: training/inventories-privileges/01.md
+          - Example 2: training/inventories-privileges/02.md
+          - Example 3: training/inventories-privileges/03.md
+          - Example 4: training/inventories-privileges/04.md
+          - Example 5: training/inventories-privileges/05.md
+          - Example 6: training/inventories-privileges/06.md
+          - Example 7: training/inventories-privileges/07.md
+          - Example 8: training/inventories-privileges/08.md
+          - Example 9: training/inventories-privileges/09.md
+          - Example 10: training/inventories-privileges/10.md
+      - 2. Ansible modules:
+          - Example 1: training/modules/01.md
+          - Example 2: training/modules/02.md
+          - Example 3: training/modules/03.md
+          - Example 4: training/modules/04.md
+          - Example 5: training/modules/05.md
+      - 3. YAML:
+          - Example 1: training/yaml/01.md
+      - 4. Ansible playbooks:
+          - Example 1: training/playbooks/01.md
+          - Example 2: training/playbooks/02.md
+          - Example 3: training/playbooks/03.md
+          - Example 4: training/playbooks/04.md
+          - Example 5: training/playbooks/05.md
+          - Example 6: training/playbooks/06.md
+          - Example 7: training/playbooks/07.md
+      - 5. Variables and Facts:
+          - Example 1: training/variables-facts/01.md
+          - Example 2: training/variables-facts/02.md
+          - Example 3: training/variables-facts/03.md
+          - Example 4: training/variables-facts/04.md
+          - Example 5: training/variables-facts/05.md
+          - Example 6: training/variables-facts/06.md
+          - Example 7: training/variables-facts/07.md
+          - Example 8: training/variables-facts/08.md
+          - Example 9: training/variables-facts/09.md
+          - Example 10: training/variables-facts/10.md
+          - Example 11: training/variables-facts/11.md
+          - Example 12: training/variables-facts/12.md
+          - Example 13: training/variables-facts/13.md
+          - Example 14: training/variables-facts/14.md
+          - Example 15: training/variables-facts/15.md
+      - 6. Importing, including and tags:
+          - Example 1: training/import-include-tags/01.md
+          - Example 2: training/import-include-tags/02.md
+          - Example 3: training/import-include-tags/03.md
+          - Example 4: training/import-include-tags/04.md
+          - Example 5: training/import-include-tags/05.md
+      - Extra:
+          - 1. Loops:
+              - Example 1: training/extra/loops/01.md
+              - Example 2: training/extra/loops/02.md
+              - Example 3: training/extra/loops/03.md
+          - 2. Jinja2:
+              - Example 1: training/extra/jinja2/01.md
+              - Example 2: training/extra/jinja2/02.md
+              - Example 3: training/extra/jinja2/03.md
+              - Example 4: training/extra/jinja2/04.md
+              - Example 5: training/extra/jinja2/05.md
+              - Example 6: training/extra/jinja2/06.md
+          - 3. Blocks:
+              - Example 1: training/extra/blocks/01.md
+              - Example 2: training/extra/blocks/02.md
+              - Example 3: training/extra/blocks/03.md
+          - 4. Async & parallel:
+              - Example 1: training/extra/async-parallel/01.md
+              - Example 2: training/extra/async-parallel/02.md
+              - Example 3: training/extra/async-parallel/03.md
+              - Example 4: training/extra/async-parallel/04.md
+              - Example 5: training/extra/async-parallel/05.md
+
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Fira Mono
+  palette:
+    primary: teal
+    accent: teal
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+
+plugins:
+  - search

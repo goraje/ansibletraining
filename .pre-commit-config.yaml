@@ -4,5 +4,6 @@
     - id: trailing-whitespace
     - id: check-json
     - id: check-yaml
+      exclude: mkdocs.yml
     - id: end-of-file-fixer
     - id: trailing-whitespace
