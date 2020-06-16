@@ -1,3 +1,3 @@
-# Mastering Ansible
+# An introduction to VM provisioning with Ansible
 
-An introduction to VM provisioning automation using Ansible.
+Documentation for the project can be found [here](https://goraje.github.io/ansibletraining/).
