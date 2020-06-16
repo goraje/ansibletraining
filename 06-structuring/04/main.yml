@@ -1,0 +1,8 @@
+- name: main
+  hosts: centos1
+  gather_facts: false
+  tasks:
+    - name: Task1
+      debug:
+        msg: Task1 in main
+- import_playbook: extra.yml

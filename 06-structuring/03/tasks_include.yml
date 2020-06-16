@@ -1,0 +1,12 @@
+- name: Include1
+  debug:
+    msg: Include1
+- name: Set include_tasks_condition
+  set_fact:
+    include_tasks_condition: false
+- name: Include2
+  debug:
+    msg: Include2
+- name: Include3
+  debug:
+    msg: Include3

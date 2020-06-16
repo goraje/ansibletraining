@@ -1,0 +1,7 @@
+- name: Example playbook
+  hosts: provisioner
+  tasks:
+    - debug:
+        msg: "{{ ansible_local.samplefacts1.jsonfacts }}"
+    - debug:
+        msg: "{{ ansible_local.samplefacts2.inifacts }}"

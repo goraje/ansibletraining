@@ -1,0 +1,10 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  tasks:
+    - name: Include tasks run
+      include_tasks: tasks_include.yml
+      when: include_tasks_condition is not defined
+    - name: Import tasks run
+      import_tasks: tasks_import.yml
+      when: import_tasks_condition is not defined

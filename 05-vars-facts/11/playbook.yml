@@ -1,0 +1,7 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  tasks:
+    - name: Accessing the hostvars
+      debug:
+        msg: "{{ hostvars[inventory_hostname].ansible_user | default('ute') }}"

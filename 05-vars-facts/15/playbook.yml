@@ -1,0 +1,25 @@
+- name: Example playbook
+  hosts: provisioner
+  gather_facts: false
+  vars:
+    vars_directory_content: "{{ lookup('pipe', 'ls {{ playbook_dir }}')}}"
+  tasks:
+    - name: Set the custom fact
+      set_fact:
+        fact_directory_content: "{{ lookup('pipe', 'ls')}}"
+    - name: Initial value for vars_directory_content
+      debug:
+        msg: "{{ vars_directory_content }}"
+    - name: Initial value for fact_directory_content
+      debug:
+        msg: "{{ fact_directory_content }}"
+    - name: Add a file to the playbook directory
+      file:
+        state: touch
+        dest: "{{ playbook_dir}}/var_vs_fact"
+    - name: Post-modification value for vars_directory_content
+      debug:
+        msg: "{{ vars_directory_content }}"
+    - name: Post-modification value for fact_directory_content
+      debug:
+        msg: "{{ fact_directory_content }}"

@@ -1,0 +1,13 @@
+- name: Example playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: Set SSH message of the day (motd)
+      copy:
+        content: "Working on: {{ ansible_hostname }}\n"
+        dest: /etc/motd
+      notify: Set MOTD
+  handlers:
+    - name: Set MOTD
+      debug:
+        msg: The MOTD was set

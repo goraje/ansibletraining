@@ -1,0 +1,10 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  vars_prompt:
+    - name: first_name
+      prompt: "Enter your first name"
+      private: false
+  tasks:
+    - debug:
+        msg: "My first name is {{ first_name }}"

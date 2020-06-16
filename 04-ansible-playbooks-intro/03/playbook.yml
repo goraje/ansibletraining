@@ -1,0 +1,9 @@
+- name: Example playbook
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Example task
+      command: whoami
+      register: whoami_output
+    - debug:
+        msg: "Remote user: {{ whoami_output.stdout }}"

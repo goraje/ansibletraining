@@ -1,0 +1,12 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  vars_prompt:
+    - name: user_password
+      prompt: "Enter your password"
+      encrypt: sha256_crypt
+      confirm: true
+      salt_size: 7
+  tasks:
+    - debug:
+        msg: "This is the encrypted password: {{ user_password }}"

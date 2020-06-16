@@ -1,0 +1,9 @@
+- name: Example playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: Install vim on CentOS machines
+      yum:
+       name: vim
+       state: present
+      when: ansible_distribution == "CentOS"

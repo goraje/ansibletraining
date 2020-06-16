@@ -1,0 +1,11 @@
+- name: Example playbook
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Example task
+      command: whoami
+      notify: whoami_handler
+  handlers:
+    - name: whoami_handler
+      debug:
+        msg: "Whoami was called on {{ inventory_hostname }}"

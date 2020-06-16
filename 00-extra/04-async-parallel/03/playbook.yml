@@ -1,0 +1,28 @@
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: 1st sleep
+      command: sleep 20
+      when: inventory_hostname == 'provisioner'
+      async: 45
+      poll: 0
+    - name: 2nd sleep
+      command: sleep 5
+      when: inventory_hostname == 'centos1'
+      async: 10
+      poll: 0
+    - name: 3rd sleep
+      command: sleep 5
+      when: inventory_hostname == 'ubuntu1'
+      async: 10
+      poll: 0
+    - name: 4th sleep
+      command: sleep 5
+      when: inventory_hostname == 'provisioner'
+      async: 10
+      poll: 0
+    - name: 5th sleep
+      command: sleep 5
+      when: inventory_hostname == 'centos1'
+      async: 10
+      poll: 0

@@ -1,0 +1,16 @@
+- hosts: all
+  tasks:
+    - name: Block of executed modules
+      block:
+        - name: Copy into /etc as unprivilaged user
+          copy:
+            content: Some content
+            dest: /etc/test.txt
+      rescue:
+        - name: Copy to /home/vagrant instead
+          copy:
+            content: Some content
+            dest: /home/vagrant/test.txt
+      always:
+        - debug:
+            msg: Always runs, .. well always!!!

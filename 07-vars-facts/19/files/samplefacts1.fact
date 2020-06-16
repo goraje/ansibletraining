@@ -1,2 +1,0 @@
-#!/bin/bash
-printf '{"kernel_package": "%s"}\n' "$(uname -r)"

@@ -1,0 +1,18 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  vars:
+    list1:
+      - value1
+      - value2
+      - value3
+  tasks:
+    - name: This is a list
+      debug:
+        msg: "{{ list1 }}"
+    - name: Accessing the values using the Python syntax
+      debug:
+        msg: "{{ list1[0] }}"
+    - name: Accessing the values using the dot notation
+      debug:
+        msg: "{{ list1.0 }}"

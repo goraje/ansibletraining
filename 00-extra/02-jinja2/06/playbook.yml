@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+    - name: Jinja2 filters
+      debug:
+        msg: >
+          ...min...
+          {{ [1, 2, 3] | min }}
+          ...max...
+          {{ [1, 2, 3] | max }}
+          ...unique...
+          {{ [1, 1, 1, 2, 2 ,3] | unique }}
+          ...random..
+          {{ [1, 2, 3, 4, 5] | random }}

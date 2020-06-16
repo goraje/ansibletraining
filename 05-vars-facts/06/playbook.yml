@@ -1,0 +1,21 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  vars_files:
+    - bucket.yml
+  tasks:
+    - name: An external list
+      debug:
+        msg: "{{ list1[0] }}"
+    - name: An external inline list
+      debug:
+        msg: "{{ list1_alternate[0] }}"
+    - name: An external dictionary
+      debug:
+        msg: "{{ dict1.key1 }}"
+    - name: An external inline dictionary
+      debug:
+        msg: "{{ dict1_alternate['key1'] }}"
+    - name: An external variable
+      debug:
+        msg: "{{ var1 }}"

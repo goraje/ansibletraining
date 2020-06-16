@@ -1,0 +1,27 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  vars_files:
+    - bucket.json
+  tasks:
+    - name: An external variable stored in JSON format
+      debug:
+        msg: "{{ var1 }}"
+    - name: An external dictionary stored in JSON format
+      debug:
+        msg: "{{ dict1 }}"
+    - name: Accessing the dictionary using the Python syntax
+      debug:
+        msg: "{{ dict1['key1'] }}"
+    - name: Accessing the dictionary using the dot notation
+      debug:
+        msg: "{{ dict1.key1 }}"
+    - name: An external list stored in JSON format
+      debug:
+        msg: "{{ list1 }}"
+    - name: Accessing the values using the Python syntax
+      debug:
+        msg: "{{ list1[0] }}"
+    - name: Acccesing the values using the dot notation
+      debug:
+        msg: "{{ list1.0 }}"

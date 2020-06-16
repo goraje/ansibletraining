@@ -1,0 +1,12 @@
+- name: Import1
+  debug:
+    msg: Import1
+- name: Set import_tasks_condition
+  set_fact:
+    import_tasks_condition: false
+- name: Import2
+  debug:
+    msg: Import2
+- name: Import3
+  debug:
+    msg: Import3

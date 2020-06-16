@@ -1,9 +1,0 @@
----
-- hosts: all
-  tasks:
-    - name: Using Jinja2 templates
-      template:
-        src: example.j2
-        dest: /tmp/example.out
-        trim_blocks: true
-...

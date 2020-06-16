@@ -1,0 +1,9 @@
+- name: Example playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: Install vim on Ubuntu machines
+      apt:
+       name: vim
+       state: present
+      when: ansible_distribution == "Ubuntu"

@@ -1,0 +1,7 @@
+- name: extra
+  hosts: ubuntu1
+  gather_facts: false
+  tasks:
+    - name: Task2
+      debug:
+        msg: Task2 in extra

@@ -1,0 +1,8 @@
+- name: Example playbook
+  hosts: provisioner
+  fact_path: "{{ playbook_dir }}/files"
+  tasks:
+    - debug:
+        msg: "{{ ansible_local.samplefacts1.kernel_package }}"
+    - debug:
+        msg: "{{ ansible_local.samplefacts2.kernel_package.package }}"

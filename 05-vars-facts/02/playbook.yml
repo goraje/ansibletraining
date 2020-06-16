@@ -1,0 +1,17 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  vars:
+    dict1:
+      key1: value1
+      key2: value2
+  tasks:
+    - name: This is a dictionary
+      debug:
+        msg: "{{ dict1 }}"
+    - name: Accessing the value using the Python syntax
+      debug:
+        msg: "{{ dict1['key1'] }}"
+    - name: Accessing the value using the dot notation
+      debug:
+        msg: "{{ dict1.key1 }}"

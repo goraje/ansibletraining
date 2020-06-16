@@ -1,0 +1,8 @@
+- name: Example playbook
+  hosts: centos1
+  gather_facts: false
+  tasks:
+    - name: Task2
+      debug:
+        msg: This is Task1
+    - import_tasks: tasks.yml
