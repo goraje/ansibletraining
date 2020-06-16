@@ -4,7 +4,12 @@ repo_name: "goraje/ansibletraining"
 
 nav:
   - index.md
+  - Training environment:
+      - environment/overview.md
+      - environment/installation.md
   - Training:
+      - training/intro.md
+      - training/first.md
       - 1. Inventories and privilege escalation:
           - Example 1: training/inventories-privileges/01.md
           - Example 2: training/inventories-privileges/02.md
@@ -90,6 +95,7 @@ markdown_extensions:
   - admonition
   - codehilite:
       guess_lang: false
+  - footnotes
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
